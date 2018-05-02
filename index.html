@@ -63,18 +63,6 @@
         .formulario {
             background: tomato;
         }
-
-        .aba-direita {
-            width: 80%;
-            height: 100%;
-            background-image: linear-gradient(to bottom left, transparent 49.9%, white 50%), url(bg-inicio.jpg);
-            background-repeat: no-repeat;
-            background-position: right 0px, center;
-            background-size: cover;
-
-        }
-
-
         .font-welcome {
             font-size: 45px;
             font-weight: bolder;
@@ -115,7 +103,7 @@
 
                     <div class="alert alert-dismissible">
                         <span style="width: 100%;">E-mail ou Senha invalidos.</span>
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close" style="font-size: 1.6em;color: #fff;">&times;</a>
+                        <a href="#" id="btn-close" class="close" data-dismiss="alert" aria-label="close" style="font-size: 1.6em;color: #fff;">&times;</a>
                     </div>
                 </div>
             </div>
@@ -160,6 +148,10 @@
     <script>
         $(document).ready(function () {
             $('#modal1').modal();
+
+            $("#btn-close").click(function(){
+                $(".alert.alert-dismissible").hide();
+            });
         });
     </script>
 </body>
